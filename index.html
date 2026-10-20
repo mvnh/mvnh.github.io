@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dammit.dev</title>
+<meta name="description" content="Danila Mitiashin — mobile developer">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23141414'/><text x='3' y='12.5' font-family='monospace' font-size='12' fill='%23e8e8e8'>d</text></svg>">
+<style>
+  :root { --bg:#141414; --fg:#e8e8e8; --dim:#7a7a7a; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; }
+  body {
+    background:var(--bg); color:var(--fg);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size:16px; line-height:1.6;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px 16px;
+  }
+  main { display:flex; flex-direction:column; align-items:center; gap:40px; }
+  pre.logo {
+    font-size:min(13px, calc((100vw - 32px) / 56));
+    line-height:1.25; user-select:none;
+  }
+  .card { display:flex; flex-direction:column; gap:14px; min-width:min(320px, 100%); }
+  .prompt::before { content:"$ "; color:var(--dim); }
+  .dim { color:var(--dim); }
+  a { color:var(--fg); text-underline-offset:4px; }
+  a:hover { color:var(--bg); background:var(--fg); text-decoration:none; }
+  .cursor { display:inline-block; width:.6em; height:1.1em; background:var(--fg);
+            vertical-align:text-bottom; animation:blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation:none; } }
+</style>
+</head>
+<body>
+<main>
+<pre class="logo" aria-label="dammit">::::::::::          ::::::      ::          ::  ::          ::  ::::::::::  ::::::::::::::
+:+        +:      :+      ::    ::+:      :+::  :+::      +::+      ::            +:
++:        :+    :+          :+  ++  +:  :+  ++  +:  :+  ++  +:      ++            :+
++#        #+    #++#++#++#++#+  ++    ++    ++  +#    +#    +#      ++            #+
++#        #+    #+          #+  ++          ++  +#          +#      ++            #+
+#+        +#    +#          +#  ##          ##  #+          #+      ##            +#
+##########      ##          ##  ##          ##  ##          ##  ##########        ##</pre>
+<section class="card">
+  <p class="prompt">whoami</p>
+  <p>danila mitiashin <span class="dim">// android &amp; kotlin dev</span></p>
+  <p><a href="https://github.com/mvnh">github</a></p>
+  <p><a href="https://t.me/mvnh13">telegram</a></p>  <!-- TODO: поменять на свой ник в Telegram -->
+  <p>mail -&gt; <a href="mailto:me@dammit.dev">me@dammit.dev</a></p>
+  <p class="prompt"><span class="cursor"></span></p>
+</section>
+</main>
+</body>
+</html>
